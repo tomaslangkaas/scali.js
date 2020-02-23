@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Scoring</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+  <div id="logo"></div>
+    <script src="scali.js"></script>
+    <script>
+    
+var logo = scali({
+  width: 10, 
+  height: 13
+},document.getElementById('logo'));
+
+logo.scale(15);
+
+logo.shape({
+  top: 0, left: 0,
+  color: '#eee',
+  h:13, b:10
+});
+
+logo.shape({ 
+  top: 0, left: 3,
+  color: '#f33',
+  h:6,a:3,b:7,d:1
+});
+
+logo.shape({
+  top: 2, left: 3,
+  color: '#eee',
+  h:6,a:3,b:5,d:1
+});
+
+logo.shape({
+  top: 0, left: 4,
+  color: '#eee',
+  h:10,a:5,b:1
+});
+
+logo.shape({ 
+  top: 4, left: 2,
+  color: '#f33',
+  h:6,a:3,b:3,d:1
+});
+
+logo.shape({ 
+  top: 0, left: 2,
+  color: '#c00',
+  h:8,a:4,d:2
+});
+
+logo.shape({
+  top: 1, left: 0,
+  color: '#eee',
+  h:9,c:3,b:1
+});
+
+logo.shape({
+  top: 0, left: 0,
+  color: '#eee',
+  a:4,h:8,d:2
+});
+
+logo.shape({
+  top: 0, left: 0,
+  color: '#eee',
+  a:9,h:3,d:2
+});
+
+logo.shape({
+  top: 5, left: 0,
+  color: '#eee',
+  a:5,h:10,b:1,d:1
+});
+
+logo.shape({
+  top: 7, left: 0,
+  color: '#c00',
+  c:4,h:8,b:2,d:3
+});
+
+logo.shape({
+  top: 6, left: 0,
+  color: '#eee',
+  a:6,h:3,b:1,d:1
+});
+
+logo.shape({
+  top: 8, left: 0,
+  color: '#eee',
+  a:10,h:5
+});
+
+/**/
+
+var logo2 = scali({
+  width: 10, 
+  height: 13
+  //,css: 'background: #eee;'
+},document.getElementById('logo'));
+
+logo2.scale(15);
+
+var logo2parts = [
+  
+logo2.shape({
+  top: 0, left: 0,
+  color: '#a0a0a0',
+  h:13, b:10
+}),
+
+logo2.shape({ // s1
+  top: 0, left: 3,
+  color: '#888',
+  h:6,a:3,b:7,d:1
+}),
+
+logo2.shape({
+  top: 2, left: 3,
+  color: '#ccc',
+  h:6,a:3,b:5,d:1
+}),
+
+logo2.shape({
+  top: 0, left: 4,
+  color: '#ddd',
+  h:10,a:5,b:1
+}),
+
+logo2.shape({ 
+  top: 4, left: 2,
+  color: '#868686',
+  h:6,a:3,b:3,d:1
+}),
+
+logo2.shape({ 
+  top: 0, left: 2,
+  color: '#777',
+  h:8,a:4,d:2
+}),
+
+logo2.shape({
+  top: 1, left: 0,
+  color: '#acacac',
+  h:9,c:3,b:1
+}),
+
+logo2.shape({
+  top: 0, left: 0,
+  color: '#c6c6c6',
+  a:4,h:8,d:2
+}),
+
+logo2.shape({
+  top: 0, left: 0,
+  color: '#d6d6d6',
+  a:9,h:3,d:2
+}),
+
+logo2.shape({
+  top: 5, left: 0,
+  color: '#dcdcdc',
+  a:5,h:10,b:1,d:1
+}),
+
+logo2.shape({
+  top: 7, left: 0,
+  color: '#767676',
+  c:4,h:8,b:2,d:3
+}),
+
+logo2.shape({
+  top: 6, left: 0,
+  color: '#c0c0c0',
+  a:6,h:3,b:1,d:1
+}),
+
+logo2.shape({
+  top: 8, left: 0,
+  color: '#aaa',
+  a:10,h:5
+})
+
+];
+
+var i = logo2parts.length;
+
+setInterval(function(){
+  if(i == logo2parts.length){
+    for(i = 0; i < logo2parts.length; i++){
+      logo2parts[i].style.visibility = 'hidden';
+    }
+    i = 0;
+  }else{
+    logo2parts[i++].style.visibility = '';
+  }
+},400);
+    </script>
+  </body>
+</html>
